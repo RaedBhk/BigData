@@ -1,0 +1,13 @@
+#!/usr/bin/python
+import sys
+salesTotal=0
+salesNum=0
+for line in sys.stdin:
+	data = line.strip().split("\t")
+	if len(data) == 6:
+		date, time, store, item, cost, payment = data
+		salesTotal += float (cost)
+		salesNum += 1
+key=1		
+print "{0}\t{1}\t{2}".format(key,salesTotal,salesNum)
+
